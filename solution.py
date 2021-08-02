@@ -6,7 +6,7 @@ from utils import *
 row_units = [cross(r, cols) for r in rows]
 column_units = [cross(rows, c) for c in cols]
 square_units = [cross(rs, cs) for rs in ("ABC","DEF","GHI") for cs in ("123","456","789")]
-diagonal_units = [[rows[i] + cols[i] for i in range(9)]] + [[rows[i] + cols[::-1][i] for i in range(9)]]
+diagonal_units = [[rows[i] + cols[i] for i in range(9)]] , [[rows[::-1][i] + cols[i] for i in range(9)]]
 unitlist = row_units + column_units + square_units + diagonal_units
 
 # unitlist = unitlist
